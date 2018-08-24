@@ -1,1 +1,1 @@
-#Device tree Resurrection Remix  gt58wifi
+# Device tree Resurrection Remix  gt58wifi
