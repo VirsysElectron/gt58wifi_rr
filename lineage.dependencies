@@ -1,0 +1,12 @@
+[
+  {
+    "repository": "android_device_samsung_gte-common",
+    "target_path": "device/samsung/gte-common"
+  },
+  {
+    "remote": "github",
+    "repository": "karthikkm007/android_kernel_wingtech_msm8916",
+    "target_path": "kernel/samsung/msm8916",
+    "branch": "oreo-mr1"
+  }
+]
