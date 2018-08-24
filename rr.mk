@@ -1,5 +1,5 @@
 # Inherit from common
-$(call inherit-product, device/samsung/gte-common/full_gt58wifi.mk)
+$(call inherit-product, device/samsung/gte-common/rr.mk)
 
 $(call inherit-product, device/samsung/gt58wifi/device.mk)
 
