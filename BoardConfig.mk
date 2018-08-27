@@ -33,7 +33,7 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 # Use Snapdragon LLVM if available on build server
 #TARGET_USE_SDCLANG := true
 
-# Bluetooth
+#Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 BOARD_HAVE_QCOM_FM := false
