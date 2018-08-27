@@ -20,4 +20,4 @@ DEVICE_PACKAGE_OVERLAYS += device/samsung/gt58wifi/overlay
 #endif
 
 #PRODUCT_COPY_FILES += \
-#    $(LOCAL_KERNEL):kernel
+#$(LOCAL_KERNEL):kernel
