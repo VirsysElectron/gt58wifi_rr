@@ -1,3 +1,8 @@
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.rr.version=RR-N-v5.8.5-20180903-gt58wifi-Unofficial \
+	ro.build.type=Unofficial
+
+
 # CABL
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.cabl=0

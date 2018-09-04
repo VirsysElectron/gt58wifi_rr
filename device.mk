@@ -11,13 +11,3 @@ LOCAL_PATH := device/samsung/gt58wifi
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += device/samsung/gt58wifi/overlay
-
-
-#ifeq ($(TARGET_PREBUILT_KERNEL),)
-#LOCAL_KERNEL := kernel/samsung/gt58wifi
-#else
-#LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-#endif
-
-#PRODUCT_COPY_FILES += \
-#$(LOCAL_KERNEL):kernel
