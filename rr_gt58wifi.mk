@@ -6,7 +6,7 @@ TARGET_SCREEN_WIDTH := 768
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := gt58wifi
-PRODUCT_NAME := cm_gt58wifi
+PRODUCT_NAME := rr_gt58wifi
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-T350
 PRODUCT_MANUFACTURER := samsung
