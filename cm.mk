@@ -1,14 +1,7 @@
 # Inherit from common
 $(call inherit-product, device/samsung/gte-common/rr.mk)
 
-$(call inherit-product, device/samsung/gt58wifi/rr.mk)
-
-#$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
-
-#$(call inherit-product, vendor/rr/config/common_full_phone.mk)
-
-# Must define platform variant before including any common things
-#TARGET_BOARD_PLATFORM_VARIANT := msm8916
+$(call inherit-product, device/samsung/gt58wifi/cm_gt58wifi.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1024
