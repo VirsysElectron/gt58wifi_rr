@@ -1,10 +1,5 @@
 [
   {
-    "repository": "android_device_samsung_gte-common",
-    "target_path": "device/samsung/gte-common"
-  },
-  ,
-  {
     "remote":      "github",
     "repository":  "TheMuppets/proprietary_vendor_samsung",
     "target_path": "vendor/samsung",
