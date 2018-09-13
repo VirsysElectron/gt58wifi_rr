@@ -1,7 +1,9 @@
 # Inherit from common
 $(call inherit-product, device/samsung/gte-common/rr.mk)
 
+# Product makefile
 $(call inherit-product, device/samsung/gt58wifi/rr_gt58wifi.mk)
+
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1024
