@@ -1,5 +1,5 @@
 # Inherit from common
-include device/samsung/gt5-common/BoardConfigCommon.mk
+include device/samsung/gte-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/samsung/gt58wifi
 
@@ -40,16 +40,6 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 #TARGET_KERNEL_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 #TARGET_PREBUILT_KERNEL := device/samsung/gt58wifi/kernel
 
-TARGET_BOARD_PLATFORM := msm8916
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
-
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := MSM8916
-TARGET_NO_BOOTLOADER := true
-
-
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
@@ -67,12 +57,8 @@ TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Partition sizes
-TARGET_USERIMAGES_USE_EXT4 := true
-BOARD_BOOTIMAGE_PARTITION_SIZE := 13631488
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 15728640
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3145728000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 12138278912
-BOARD_FLASH_BLOCK_SIZE := 131072
 
 #RIL
 BOARD_PROVIDES_LIBRIL := false
