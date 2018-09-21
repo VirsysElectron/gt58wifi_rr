@@ -16,12 +16,11 @@ TARGET_USE_SDCLANG := true
 
 
 # Build system
-#USE_NINJA := false
-COMPILE_WITH_JACK := false
+USE_NINJA := false
+#COMPILE_WITH_JACK := false
 
 # Audio
 #USE_CUSTOM_AUDIO_POLICY :=0
-# 
 
 
 TARGET_KERNEL_SOURCE := kernel/samsung/gt58wifi
@@ -34,13 +33,42 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno306
 TARGET_CPU_VARIANT := cortex-a53
 TARGET_CPU_CORTEX_A53 := true
 
+# Audio
+AUDIO_FEATURE_ENABLED_KPI_OPTIMIZE := true
+BOARD_USES_ALSA_AUDIO := true
+USE_CUSTOM_AUDIO_POLICY := 1
+USE_XML_AUDIO_POLICY_CONF := 1
+
+
+# Board CFLAGS
+TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 
+# Camera
+TARGET_PROVIDES_CAMERA_HAL := true
+USE_DEVICE_SPECIFIC_CAMERA := true
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+
+# Charger
+BOARD_CHARGER_SHOW_PERCENTAGE := true
+BOARD_CHARGER_ENABLE_SUSPEND := true
+
+# Cpusets
+ENABLE_CPUSETS := true
+
+
+# Display
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+MAX_EGL_CACHE_SIZE := 2048*1024
+NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
+MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 
 # Init
-#TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/msm8916-common/include
@@ -58,10 +86,10 @@ BOARD_RAMDISK_OFFSET     := 0x02000000
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
-TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
-#TARGET_KERNEL_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
-#TARGET_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfigg
-#TARGET_SELINUX_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
+#TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
+TARGET_KERNEL_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
+TARGET_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfigg
+TARGET_SELINUX_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 
 #TARGET_PREBUILT_KERNEL := device/samsung/gt58wifi/kernel
 
@@ -71,6 +99,11 @@ TARGET_KERNEL_VARIANT_CONFIG := msm8916_sec_gt58wifi_eur_defconfig
 
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS:= true
+
+
+# Bluetooth
+BOARD_HAVE_BLUETOOTH := true
+BOARD_HAVE_BLUETOOTH_QCOM := true
 
 
 # Recovery
