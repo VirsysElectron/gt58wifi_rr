@@ -1,10 +1,3 @@
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.rr.version=RR-N-v5.8.5-20180903-gt58wifi-Unofficial
-
-PRODUCT_PROPERTY_OVERRIDES += \
-	rr.build.type=Unofficial
-
-
 # CABL
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.qualcomm.cabl=0
@@ -21,7 +14,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Screen
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sf.lcd_density=
+	ro.sf.lcd_density= 200
 
 # Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
