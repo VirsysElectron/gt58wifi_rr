@@ -2,7 +2,7 @@
 $(call inherit-product, device/samsung/gte-common/rr.mk)
 
 # Product makefile
-$(call inherit-product, device/samsung/gt58wifi/rr_gt58wifi.mk)
+$(call inherit-product, device/samsung/gt58wifi/device.mk)
 
 
 # Boot animation
