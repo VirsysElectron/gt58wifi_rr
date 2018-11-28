@@ -7,26 +7,29 @@ $(call inherit-product, device/samsung/gte-common/device-common.mk)
 LOCAL_PATH := device/samsung/gt58wifi
 
 # System properties
--include $(LOCAL_PATH)/system.prop
-
-# Common overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/gt58wifi/overlay
+-include $(LOCAL_PATH)/system_prop.mk
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/samsung/gt58wifi/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
-    device/samsung/gt58wifi/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
-    device/samsung/gt58wifi/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
-    device/samsung/gt58wifi/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
-    device/samsung/gt58wifi/audio/acdb/Bluetooth_cal.acdb:system/etc/Bluetooth_cal.acdb \
-    device/samsung/gt58wifi/audio/acdb/General_cal.acdb:system/etc/General_cal.acdb \
-    device/samsung/gt58wifi/audio/acdb/Global_cal.acdb:system/etc/Global_cal.acdb \
-    device/samsung/gt58wifi/audio/acdb/Handset_cal.acdb:system/etc/Handset_cal.acdb \
-    device/samsung/gt58wifi/audio/acdb/Hdmi_cal.acdb:system/etc/Hdmi_cal.acdb \
-    device/samsung/gt58wifi/audio/acdb/Headset_cal.acdb:system/etc/Headset_cal.acdb \
-    device/samsung/gt58wifi/audio/acdb/Speaker_cal.acdb:system/etc/Speaker_cal.acdb
+    $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths.xml:system/etc/sound_trigger_mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/sound_trigger_mixer_paths_wcd9306.xml:system/etc/sound_trigger_mixer_paths_wcd9306.xml \
+    $(LOCAL_PATH)/configs/audio/sound_trigger_platform_info.xml:system/etc/sound_trigger_platform_info.xml \
+    $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf
+    
+    
+# Bluetooth
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/bluetooth/iop_bt.db:system/etc/bluetooth/iop_bt.db \
+    $(LOCAL_PATH)/configs/bluetooth/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf
 
-# Ril
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.carrier=wifi-only \
-    ro.radio.noril=1
+# Camera
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:system/etc/A05QF_sr544_module_info.xml \
+    $(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:system/etc/B05QF_sr544_module_info.xml \
+    $(LOCAL_PATH)/configs/camera/A05QF_sr544_module_info.xml:system/etc/C05QF_sr544_module_info.xml
+    
+    
+# Common overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/gt58wifi/overlay
