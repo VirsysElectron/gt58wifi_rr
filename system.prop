@@ -9,13 +9,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # RAM
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.config.low_ram=false \
-	ro.config.zram=false
-
-# Screen
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.sf.lcd_density= 200
+	ro.config.low_ram=false
 
 # Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
 	telephony.lteOnCdmaDevice=0
+
+# Volume
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.config.vc_call_vol_steps=15 \
+	ro.config.media_vol_steps=30
